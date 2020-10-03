@@ -10,10 +10,12 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { swapHorizontal, settings, arrowDown, arrowUp, settingsSharp, add } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
+import Tab4 from './pages/Tab4';
+import { IonSegment, IonSegmentButton,  IonFab, IonFabButton,  IonFabList, IonItem, IonList, IonNote, IonContent, IonChip } from '@ionic/react';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -39,27 +41,41 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/tab1" component={Tab1} exact={true} />
-          <Route path="/tab2" component={Tab2} exact={true} />
-          <Route path="/tab3" component={Tab3} />
-          <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
+          <Route path="/transactions" component={Tab1} exact={true} />
+          <Route path="/receive" component={Tab2} exact={true} />
+          <Route path="/send" component={Tab3} />
+          <Route path="/settings" component={Tab4} />
+          <Route path="/" render={() => <Redirect to="/transactions" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          <IonTabButton tab="tab1" href="/transactions">
+            <IonIcon icon={swapHorizontal} />
+            <IonLabel>Transactions</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+          <IonTabButton tab="tab2" href="/receive">
+            <IonIcon icon={arrowDown} />
+            <IonLabel>Receive</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="tab3" href="/send">
+            <IonIcon icon={arrowUp} />
+            <IonLabel>Send</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab4" href="/settings">
+            <IonIcon icon={settingsSharp} />
+            <IonLabel>Settings</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
+    <IonFab vertical="top" horizontal="end"  slot="fixed">
+          <IonFabButton>
+            <IonIcon icon={add} />
+          </IonFabButton>
+          <IonFabList side="bottom">
+            <IonFabButton><IonIcon icon={arrowDown} /></IonFabButton>
+            <IonFabButton><IonIcon icon={arrowUp} /></IonFabButton>
+          </IonFabList>
+        </IonFab>
   </IonApp>
 );
 

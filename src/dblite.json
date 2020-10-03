@@ -1,0 +1,51 @@
+[{"country":"ng",
+    "data":[{
+    "id":"objectkeyID",
+    "name":"accountbalance",
+    "desc":"check bank account balance",
+        "params":[
+         {"name":"access bank","data":{"code":"*901*00#"}},
+         {"name":"diamond bank","data":{"code":"*710556*[pin]#"}},
+         {"name":"ecobank","data":{"code":"*326*0#"}},
+         {"name":"fidelity","data":{"code":"*770*0#"}},
+         {"name":"fcmb","data":{"code":"*329*00#"}},
+         {"name":"first bank","data":{"code":"*894*00#","alternate":[{"code":"*894#"}]}},
+         {"name":"gt bank","data":{"code":"*737*6*1#","alternate":[{"code":"*737#"}]}},
+         {"name":"keystone bank","data":{"code":"*322*030#"}},
+                 {"name":"stanbic bank","data":{"code":"*909*1*1#"}},
+          {"name":"polaris bank","data":{"code":"*833*6#"}},
+             {"name":"sterling bank","data":{"code":"*822*6#"}},
+         {"name":"uba","data":{"code":"*919*00#"}},
+         {"name":"unity bank","data":{"code":"*7799#"}},
+         {"name":"union bank","data":{"code":"*826#"}},
+         {"name":"wema","data":{"code":"*945*0#"}},
+         {"name":"zenith bank","data":{"code":"*966*00#"}}
+       ],
+        "hint":"Dial codes via registered phone number"
+   },{
+    "id":"objectkeyID",
+    "name":"transferfunds",
+    "desc":"transfer funds to another account",
+        "params":[
+       {"name":"access bank","data":{"code":"*901*2*[Amount]*[Account Number]#","alternate":[{"code":"*901*1*[Amount]*[Account Number]#"}]}},
+         {"name":"diamond bank","data":{"code":"*426*[Amount]*[Account Number]#"}},
+         {"name":"ecobank","data":{"code":"*326#"}},
+         {"name":"fidelity","data":{"code":"*770*[ACCOUNT]*[AMOUNT]#"}},
+         {"name":"fcmb","data":{"code":"*329*[Amount]*[Account number]#"}},
+         {"name":"first bank","data":{"code":"*894*Amount*Account number#"}},
+         {"name":"gt bank","data":{"code":"*737*2*[Amount]*[NUBAN Account Number]#","alternate":[{"code":"*737*1*[Amount]*[NUBAN Account Number]#"}]}},
+         {"name":"jaiz bank","data":{"code":"*389*301*[Account number]*[Account]#"}},
+                 {"name":"stanbic bank","data":{"code":"*909#"}},
+          {"name":"polaris bank","data":{"code":"*833*[AMOUNT]*[ACCOUNTNUMBER]#"}},
+             {"name":"sterling bank","data":{"code":"*822*5*[AMOUNT]*[NUBAN]#"},"alternate":[{"code":"*822*4*[AMOUNT]*[NUBAN]#"}]},
+         {"name":"uba","data":{"code":"*919*00#"}},
+         {"name":"unity bank","data":{"code":"*7799#"}},
+         {"name":"union bank","data":{"code":"*919#"}},
+         {"name":"wema","data":{"code":"*945*[beneficiaryaccountnumber]*[amount]#"}},
+         {"name":"zenith bank","data":{"code":"*966*[Amount]*[Account Number]#"}}
+       ],
+        "hint":"Dial codes via registered phone number"
+   }]
+  },
+{"country":"in","data":{}}
+]
