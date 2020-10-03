@@ -31,7 +31,10 @@ const TransactionsContainer: React.FC<any> = () => {
   return (
     <div className="container">
         <>
-        <IonSegment onIonChange={e => console.log('Segment selected', e.detail.value)} value="receive">
+        <IonSegment onIonChange={e => console.log('Segment selected', e.detail.value)} value="all">
+        <IonSegmentButton value="all">
+            <IonLabel>All</IonLabel>
+          </IonSegmentButton>
           <IonSegmentButton value="receive">
             <IonLabel>Received</IonLabel>
           </IonSegmentButton>
